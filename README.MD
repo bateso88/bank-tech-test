@@ -101,6 +101,8 @@ date || credit || debit || balance
 10/01/2012 || 1000.00 || || 1000.00
 ```
 
+## Solution
+
 To achieve this result (with accurate dates), run the following commands in IRB:  
 ```
 > account = BankAccount.new 

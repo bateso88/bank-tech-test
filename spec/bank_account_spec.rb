@@ -14,6 +14,10 @@ describe BankAccount do
       expect(statement).to receive(:update).with(100)
       account.deposit(100)
     end
+
+    it 'throws error if deposit amount is negative' do
+      expect { account.withdraw(-100) }.to raise_error 'Amount must be positive'
+    end
   end
 
   context 'withdraw' do
@@ -26,6 +30,10 @@ describe BankAccount do
 
     it 'throws error if withdrawal amount is greater than balance' do
       expect { account.withdraw(100) }.to raise_error 'Insufficient funds'
+    end
+
+    it 'throws error if withdrawal amount is negative' do
+      expect { account.withdraw(-100) }.to raise_error 'Amount must be positive'
     end
   end
 end
