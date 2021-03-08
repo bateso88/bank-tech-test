@@ -14,5 +14,10 @@ describe Statement do
       expect(transaction_class).to receive(:new).with({ balance: 100, credit: 100, debit: nil })
       statement.update(100, transaction_class)
     end
+
+    it 'creates a new transaction after a withdrawal' do
+      expect(transaction_class).to receive(:new).with({ balance: 0, credit: nil, debit: 100 })
+      statement.update(-100, transaction_class)
+    end
   end
 end
