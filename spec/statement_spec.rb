@@ -11,7 +11,7 @@ describe Statement do
     it { is_expected.to respond_to :update }
 
     it 'creates a new transaction after a deposit' do
-      expect(transaction_class).to receive(:new).with(100)
+      expect(transaction_class).to receive(:new).with({ balance: 100, credit: 100, debit: nil })
       statement.update(100, transaction_class)
     end
   end
