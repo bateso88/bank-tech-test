@@ -1,0 +1,72 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/oliverbates/Projects/Makers/week10/bank-tech-test/spec/bank_account_spec.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          2,
+          2,
+          2,
+          null,
+          1,
+          2,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/oliverbates/Projects/Makers/week10/bank-tech-test/lib/bank_account.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          2,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/oliverbates/Projects/Makers/week10/bank-tech-test/lib/statement.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/oliverbates/Projects/Makers/week10/bank-tech-test/spec/statement_spec.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          2,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1615205325
+  }
+}
