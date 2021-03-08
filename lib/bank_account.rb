@@ -11,4 +11,8 @@ class BankAccount
   def deposit(value)
     @statement.update(value)
   end
+
+  def withdraw(value)
+    @statement.update(-value)
+  end
 end

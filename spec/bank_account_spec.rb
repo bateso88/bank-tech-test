@@ -15,4 +15,13 @@ describe BankAccount do
       account.deposit(100)
     end
   end
+
+  context 'withdraw' do
+    it { is_expected.to respond_to :withdraw }
+
+    it 'updates statement' do
+      expect(statement).to receive(:update).with(-100)
+      account.withdraw(100)
+    end
+  end
 end
