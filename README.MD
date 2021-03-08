@@ -48,7 +48,7 @@ I want to be able to deposit money to an account
 ```
 As a client
 So that I can use my money currently in a bank
-I want to be able to withdraw my  money
+I want to be able to withdraw my money
 ```
 
 ```
