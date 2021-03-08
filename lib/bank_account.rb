@@ -13,20 +13,20 @@ class BankAccount
   def deposit(value)
     raise 'Amount must be positive' if value.negative?
 
-    @statement.update(value.round(2))
+    @statement.update(value)
   end
 
   def withdraw(value)
-    raise 'Insufficient funds' if insufficient_funds?(value)
+    raise 'Insufficient funds' if balance_less_than?(value)
 
     raise 'Amount must be positive' if value.negative?
 
-    @statement.update(-value.round(2))
+    @statement.update(-value)
   end
 
   private
 
-  def insufficient_funds?(value)
+  def balance_less_than?(value)
     value > @statement.balance
   end
 end

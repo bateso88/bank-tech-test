@@ -6,8 +6,8 @@ class Transaction
 
   def initialize(credit:, debit:, balance:, date: Time.now.strftime('%d/%m/%Y'))
     @date = date
-    @credit = credit.nil? ? nil : '%.2f' % credit
-    @debit = debit.nil? ? nil : '%.2f' % debit
-    @balance = balance.nil? ? nil : '%.2f' % balance
+    @credit = credit.nil? ? nil : format('%0.2f', credit)
+    @debit = debit.nil? ? nil : format('%.2f', debit)
+    @balance = balance.nil? ? nil : format('%.2f', balance)
   end
 end

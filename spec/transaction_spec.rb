@@ -11,7 +11,7 @@ describe Transaction do
     end
 
     it 'the credit should be the correct amount' do
-      expect(transaction.credit).to eq 100
+      expect(transaction.credit).to eq '100.00'
     end
 
     it 'the debit should be the correct amount' do
@@ -19,7 +19,7 @@ describe Transaction do
     end
 
     it 'the balance should be the correct amount' do
-      expect(transaction.balance).to eq 150
+      expect(transaction.balance).to eq '150.00'
     end
   end
 
@@ -31,7 +31,7 @@ describe Transaction do
     end
 
     it 'the debit should be the correct amount' do
-      expect(transaction.debit).to be 100
+      expect(transaction.debit).to eq '100.00'
     end
   end
 end
