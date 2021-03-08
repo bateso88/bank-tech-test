@@ -13,7 +13,7 @@ class BankAccount
   def deposit(value)
     raise 'Amount must be positive' if value.negative?
 
-    @statement.update(value)
+    @statement.update(value.round(2))
   end
 
   def withdraw(value)
@@ -21,7 +21,7 @@ class BankAccount
 
     raise 'Amount must be positive' if value.negative?
 
-    @statement.update(-value)
+    @statement.update(-value.round(2))
   end
 
   private
