@@ -69,9 +69,10 @@ As per my planning, I had three classes:
 1. BankAccount
 2. Statement
 3. Transaction  
+
 I used three classes so that I could fulfill the SRP.  
 
-The BankAccount class's responsibility is to create a new transaction (either a withdrawal or deposit), via the statement.   
+The BankAccount class's responsibility is to create a new transaction (either a debit or credit), via the Statement class.   
 The Statement class's responsibility is to show a list of all transactions.  
 The Transaction class's responsibility is to store information about the transaction.
 
@@ -108,3 +109,5 @@ To achieve this result (with accurate dates), run the following commands in IRB:
 > account.withdraw(500)  
 > account.statement.view
 ```
+
+![Solution](example-usage.png)
