@@ -2,9 +2,9 @@
 
 require_relative 'transaction'
 
-# Statement class. Can create new transactions and print
+# Statement class. Can create new transactions and be viewed
 class Statement
-  attr_reader :balance, :transactions
+  attr_reader :transactions, :balance
 
   def initialize
     @balance = 0
@@ -15,6 +15,13 @@ class Statement
     update_balance(value)
     transaction = debit_or_credit?(value, transaction_class)
     transactions.unshift(transaction)
+  end
+
+  def view
+    puts 'date || credit || debit || balance'
+    transactions.each do |transaction|
+      puts "#{transaction.date} || #{transaction.credit} || #{transaction.debit} || #{transaction.balance}"
+    end
   end
 
   private

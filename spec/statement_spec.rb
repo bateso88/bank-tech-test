@@ -4,7 +4,7 @@ require 'statement'
 
 describe Statement do
   let(:statement) { Statement.new }
-  let(:transaction) { double('transaction') }
+  let(:transaction) { double('transaction', date: 1, credit: 2, debit: 3, balance: 4) }
   let(:transaction_class) { double('transaction_class', new: transaction) }
 
   context 'update' do
@@ -25,11 +25,19 @@ describe Statement do
   end
 
   context 'transactions' do
-    it 'shows a list of all transactions' do
+    it 'returns a list of all transactions' do
       statement.update(100, transaction_class)
       statement.update(-50, transaction_class)
       expect(statement.transactions.length).to eq 2
       expect(statement.transactions).to all(eq(transaction))
+    end
+  end
+
+  context 'view' do
+    it 'returns nil' do
+      statement.update(100, transaction_class)
+      expect($stdout).to receive(:puts).twice
+      statement.view
     end
   end
 end

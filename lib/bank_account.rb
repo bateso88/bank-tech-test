@@ -4,9 +4,8 @@ require_relative 'statement'
 
 # BankAccount class. Can withdraw from and deposit to a bank account
 class BankAccount
-
   attr_reader :statement
-  
+
   def initialize(statement_class = Statement)
     @statement = statement_class.new
   end

@@ -12,12 +12,10 @@
 2. withdraw(value)
 
 ###### Statement
-1. add_transaction
-2. transactions
-3. update_balance
-4. print
+1. update
+2. view
 
-###### Transaction (all attributes)
+###### Transaction (attributes)
 1. date
 2. credit
 3. debit
@@ -37,6 +35,14 @@ date || credit || debit || balance
 13/01/2012 || 2000.00 || || 3000.00
 10/01/2012 || 1000.00 || || 1000.00
 ```
+
+To achieve this result, run the following commands in the terminal:  
+`irb -r './lib/bank_account'`  
+`account = BankAccount.new`  
+`account.deposit(1000)`  
+`account.deposit(2000)`  
+`account.withdraw(500)`  
+`account.statement.view`
 
 ## User Stories
 ```
