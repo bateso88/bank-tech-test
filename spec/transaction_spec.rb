@@ -4,10 +4,10 @@ require 'transaction'
 
 describe Transaction do
   context 'deposit' do
-    let(:transaction) { Transaction.new(credit: 100, debit: nil, balance: 150) }
+    let(:transaction) { Transaction.new(credit: 100, debit: nil, balance: 150, date: '29/02/2000') }
 
     it "the date should be today's date" do
-      expect(transaction.date).to eq(Time.now.strftime('%d/%m/%Y'))
+      expect(transaction.date).to eq('29/02/2000')
     end
 
     it 'the credit should be the correct amount' do

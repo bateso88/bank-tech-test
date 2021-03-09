@@ -6,7 +6,7 @@ describe Statement do
   create_statment_instance_and_doubles_for_transaction_class_and_transaction
 
   context 'update' do
-    it 'creates a new transaction after a deposit and updates balance correctly' do
+    it 'creates a new transaction after a deposit and updates balance' do
       expect(transaction_class).to receive(:new).with({ balance: 100, credit: 100, debit: nil })
       statement.update(100, transaction_class)
       expect(statement.balance).to eq 100

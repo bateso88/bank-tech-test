@@ -10,6 +10,7 @@ describe 'deposit feature' do
     expect(account.statement.transactions[0].credit).to eq '3000.00'
     expect(account.statement.transactions[0].debit).to be nil
     expect(account.statement.transactions[0].balance).to eq '3000.00'
-    expect(account.statement.transactions[0].date).to eq(Time.now.strftime('%d/%m/%Y'))
+    expect(account.statement.transactions[0].date).to eq(Time.now.strftime('%d'\
+    '/%m/%Y'))
   end
 end

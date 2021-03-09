@@ -2,7 +2,10 @@
 
 def create_statment_instance_and_doubles_for_transaction_class_and_transaction
   let(:statement) { Statement.new }
-  let(:transaction) { double('transaction', date: 1, credit: 2, debit: 3, balance: 4) }
+  let(:transaction) do
+    double('transaction', date: 1, credit: 2, debit: 3,
+                          balance: 4)
+  end
   let(:transaction_class) { double('transaction_class', new: transaction) }
 end
 
